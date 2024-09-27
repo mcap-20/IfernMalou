@@ -1,0 +1,370 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #a09f9f;
+    padding: 8px 0;
+    box-shadow: 0 2px 5px rgba(253, 252, 252, 0.1);
+}
+
+.container {
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f3f3f3;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #007f07;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full height of the viewport */
+    background-image: url('./images/pc.png');
+    background-size: contain; /* Adjust the size based on your need */
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Light overlay for readability */
+}
+
+.hero h1 {
+    font-size: 1.2rem;
+    color: #fff9f9;
+    z-index: 1; /* Ensure text appears above the background */
+}
+
+/* Optional: Text Shadow for extra visibility */
+
+.hero h1 {
+    font-family:sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    display: block; /* Ensure h1 is a block element */
+    margin-bottom: 10px; /* Optional spacing */
+}
+
+.hero p {
+    display: block; /* Ensure p is a block element */
+    margin-top: 10px; /* Optional spacing */
+}
+.form-container {
+    display: flex;
+    justify-content: center; /* Horizontally centers the form */
+    align-items: center;    /* Vertically centers the form */
+    height: 100vh;         /* Full height of the viewport */
+}
+
+.hero-form {
+    width: 40%;
+    background: rgba(127, 128, 127, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto; /* Centers the form horizontally */
+}
+
+
+.hero-form input, .hero-form textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.hero-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #04b241;
+    border: none;
+    color: rgb(250, 252, 250);
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+footer {
+    background-color: #080808;
+    color: #f9f5f5;
+    text-align: center;
+    padding: 5px;
+}
+/* Grid Container */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+/* Individual Product Cards */
+.product-card {
+    border: 1px solid #737171;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+/* Add button inside product card */
+.read-more-btn {
+    background-color: #04b241;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.read-more-btn:hover {
+    background-color: #0bfffb;
+}
+
+/* Modal Box for Product Description */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background */
+}
+
+.modal-content {
+    background-color: rgb(147, 146, 146);
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Overlay */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Ensure it's on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #4ac065;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #606060;
+    text-decoration: none;
+}
+
+/* Product Title */
+#product-title {
+    font-size: 1rem; /* Adjust as needed */
+    margin-bottom: 10px;
+    color: #090909; /* Example color */
+}
+
+/* Product Description */
+#product-desc {
+    font-size: 1rem; /* Adjust as needed */
+    color: #ffffff; /* Desired font color */
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+    }
+}
+.opportunities {
+    background-image: url('./images/pc.png');
+    padding: 20px; /* Space around the content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px auto; /* Center the section with margin */
+    max-width: 800px; /* Maximum width for larger screens */
+    text-align: center; /* Center the text */
+}
+
+.opportunities h1 {
+    font-family: 'Arial', sans-serif; /* Change the font */
+    font-size: 2.5em; /* Larger font size for the header */
+    color: #333; /* Dark text color */
+    margin-bottom: 10px; /* Space below the header */
+}
+
+.opportunities p {
+    font-family: 'Georgia', serif; /* Change the font */
+    font-size: 1.2em; /* Medium font size for paragraphs */
+    color: #666; /* Gray text color */
+    line-height: 1.5; /* Spacing between lines */
+    margin: 10px 0; /* Space above and below paragraphs */
+}
+
+.opportunities ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 10px 0; /* Space around the list */
+}
+
+.opportunities ul li {
+    font-family: 'Verdana', sans-serif; /* Change the font */
+    font-size: 1.1em; /* Slightly larger font for list items */
+    color: #007bff; /* Link color */
+    margin: 5px 0; /* Space between list items */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+header {
+    background: #333; /* Dark background for header */
+    color: white;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Centering the content */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact {
+    background: rgb(96, 156, 117); /* White background for the contact section */
+    padding: 20px;
+    margin: 20px auto; /* Centering */
+    max-width: 600px; /* Width limit */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(242, 241, 241, 0.1); /* Subtle shadow */
+    text-align: center; /* Centered text */
+    font-size: larger;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 20px;
+    font-size: 30px; /* Icon size */
+    color: #005abb; /* Blue color for icons */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.social-icons a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333; /* Dark footer background */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

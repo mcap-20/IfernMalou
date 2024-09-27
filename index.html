@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <audio autoplay loop>
+        <source src="./audios/1536_Corporate_Inspirational.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('background-audio').volume = .1; // Set volume to 20%
+        });
+    </script>
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/x-icon.png" alt="iFernMalou Logo" style="height: 120px;">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="opportunities.html">Opportunities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="store.html">Store</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <audio autoplay loop>
+        <source src="./audios/1536_Corporate_Inspirational.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('background-audio').volume = .1; // Set volume to 20%
+        });
+    </script>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Join i-fern for a prosperous future</h1>
+                <p>Become a distributor and transform lives today with effective supplements and business opportunities.</p>
+
+            </div>
+            <div class="hero-form">
+                <form action="send_email.php" method="POST">
+                    <input type="text" name="name" placeholder="Enter Your Name" required>
+                    <input type="email" name="email" placeholder="Enter Your Email Address" required>
+                    <input type="tel" name="phone" placeholder="Phone number" required>
+                    <textarea name="message" placeholder="Your Message Here" required></textarea>
+                    <button type="submit">Join Now</button>
+                </form>
+
+                
+
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 iFernMalou. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
